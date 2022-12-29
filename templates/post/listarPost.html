@@ -1,0 +1,25 @@
+
+
+{% if object_list %}
+
+{% for p in object_list %}
+
+<h1> {{p.titulo}} </h1>
+
+<img
+{{
+    src="{{ p.imagen.url }}"
+    alt="thumb"
+    class="img-fluid"
+    height="450"
+}}/>
+
+
+<p> {{p.texto}} </p>
+
+{% endfor %}
+
+{% else %}
+<h1>Error 404</h1>
+
+{% endif %}

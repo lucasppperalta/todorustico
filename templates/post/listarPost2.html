@@ -1,0 +1,19 @@
+{% load static %}
+{% if post %}
+				
+    {% for p in post %}
+
+        <h1>{{p.titulo}}</h1>
+        <p>{{p.fecha}}</p>
+        {% if p.imagen %}
+            <img src="{{ p.imagen.url }}"  width="550" height="400">
+        {% else %}
+            <img src="post/default.jpg"  width="550" height="400">
+        {% endif %}
+        {{p.texto|safe}}
+
+    {% endfor %}
+
+{% else %}
+    <h1>Error 404</h1>
+{% endif %}
