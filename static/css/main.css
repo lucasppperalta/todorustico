@@ -975,7 +975,7 @@ input, select, textarea {
 
 		#thumbnails article {
 			position: relative;
-			width: 50%;
+			width: 960px;
 			background: #101010;
 			outline: 0;
 		}
@@ -990,7 +990,7 @@ input, select, textarea {
 
 				#thumbnails article .thumbnail img {
 					display: block;
-					width: 100%;
+					width: 960px;
 				}
 
 				#thumbnails article .thumbnail:before {
@@ -1003,8 +1003,8 @@ input, select, textarea {
 					position: absolute;
 					left: 0;
 					top: 0;
-					width: 100%;
-					height: 100%;
+					width: 960px;
+					height: 720px;
 					box-shadow: inset 0 0 0 2px #00D3B7, inset 0 0 0px 3px rgba(0, 0, 0, 0.15);
 					opacity: 0;
 					z-index: 1;

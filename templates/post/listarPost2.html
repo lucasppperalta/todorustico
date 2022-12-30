@@ -1,19 +1,53 @@
+{% extends 'base2.html' %}
 {% load static %}
+{% block contenido %}
 {% if post %}
-				
+    
     {% for p in post %}
 
-        <h1>{{p.titulo}}</h1>
-        <p>{{p.fecha}}</p>
+        <!--TITULO DEL POST-->
+        <p class="h2"></p>
+        <figure class="text-center">
+            <blockquote class="blockquote">
+              <h1>{{p.titulo}}</h1>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+        <!--TITULO DEL POST-->
         {% if p.imagen %}
-            <img src="{{ p.imagen.url }}"  width="550" height="400">
+        
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{ p.imagen.url }}" class="img-thumbnail mx-auto d-block" alt="..." height="7000px" width="1000px"></i>>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ p.imagen.url }}" class="img-thumbnail mx-auto d-block" alt="..." height="7000px" width="1000px">
+                    </div>
+
+                  <!--para agregar mas imagenes copiar lo de arriba y añadir imagenes-->
+
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         {% else %}
             <img src="post/default.jpg"  width="550" height="400">
         {% endif %}
-        {{p.texto|safe}}
+        
 
     {% endfor %}
-
+    
 {% else %}
     <h1>Error 404</h1>
 {% endif %}
+{% endblock %}
