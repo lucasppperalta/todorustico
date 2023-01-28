@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+<!--HEAD-->
+
+{% block titulo %}
+    Misión 
+{% endblock %}
+<!--BODY-->
+{% block contenido %}
+
+
+
+<!-- ***** Product Area Starts ***** -->
+<section class="section" id="product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+            <div class="left-images">
+                <img src="{%static 'assets/images/petshop.jpg' %}" height="500px" alt="">
+                <img src="{%static 'assets/images/gato.jpg' %}" height="500px" alt="">              
+            </div>
+        </div>
+        <div class="col-lg-4">
+
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                   
+
+                </ul>
+                <div class="right-content">
+                    <h4>¡Abriremos un PetShop!</h4>
+                    
+                <span>¡Para los amantes de las mascotas! Estamos emocionados de anunciar el próximo lanzamiento de nuestro negocio de petshop, que ofrecerá una amplia variedad de productos para tu mascota. Nuestra tienda contará con una amplia gama de juguetes, así como accesorios y productos de cuidado para garantizar 
+                    el bienestar de tu mascota. Nuestra prioridad es brindar un servicio excepcional y personalizado a nuestros clientes y sus mascotas. Estamos emocionados de ser parte de la comunidad 
+                    y esperamos verlos pronto en nuestra tienda virtual. ¡Manténganse atentos para más detalles sobre la fecha de apertura y eventos especiales! </span>
+                <div class="quote">
+                    
+                </div>
+                <div class="quantity-content">
+
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Product Area Ends ***** -->
+
+{% endblock %}

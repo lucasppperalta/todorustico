@@ -10,23 +10,25 @@ class AddPost(CreateView):
     fields = ['titulo', 'texto', 'categoria', 'imagen']
     template_name ='post/addPost.html'
     success_url = reverse_lazy('index')
+############################################################
 
 class mostrarPost(ListView):
     model = Post
     template_name = 'post/listarPost.html'
 
-def listarPost(request):
-    post = Post.objects.all()
-    context = {
-        'post': post,
-    }
-    return render(request, 'post/ListarPost2.html', context)
 
-def ListarPostPorCategoria(request, categoria):
-    categoria2 = Categoria.objects.filter(nombre=categoria)
+###########################################################
 
-    post = Post.objects.filter(categoria = categoria2[0].id)
-    context = { 
-		'post': post,
-    }
-    return render(request,'post/listarPost2', context)
+class mostrarCampo(ListView):
+    model = Post
+    template_name = 'post/listarPost2.html'
+
+###########################################################
+
+class mostrarNoticia(ListView):
+    model = Post
+    template_name = 'post/noticias.html'
+    
+
+
+

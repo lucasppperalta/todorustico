@@ -1,4 +1,4 @@
-{% extends "base2.html" %}
+{% extends "base.html" %}
 {% load static %}
 <!--HEAD-->
 
@@ -7,97 +7,149 @@
 {% endblock %}
 <!--BODY-->
 {% block contenido %}
-    <!-- Mision -->
+ 
+    
+        <!-- ***** Main Banner Area Start ***** -->
+        <div class="page-heading about-page-heading" id="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="inner-content">
+                            <h2>Acerca de Nosotros</h2>
+                            <span>Estos son nuestros comienzos. Nuestra historia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Main Banner Area End ***** -->
+    
+        <!-- ***** About Area Starts ***** -->
+        <div class="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="left-image">
+                            <img src="{%static 'assets/images/quienes_somos.jpeg' %}" height="350px" alt="Nuestro hogar, nuestro trabajo">
+                            <p>Nuestro hogar, nuestro lugar de trabajo</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="right-content">
+                            <h4>Acerca de nosotros y nuestra historia</h4>
+                            <span>Nuestra empresa es un pequeño negocio familiar que ha enfrentado varios fracasos en otros emprendimientos, pero nunca hemos dejado de intentar.</span>
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i><p>Nuestro principal objetivo es diseñar muebles de madera cómodos y accesibles para todos, teniendo en cuenta la situación económica que atravieza país.</p>
+                            </div>
+                            <p>A través de nuestra dedicación y esfuerzo, esperamos poder ofrecer productos de alta calidad a precios justos. Estamos comprometidos a seguir trabajando duro para lograrlo.</p>
 
-    <div class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <img src="{% static 'images/mision.jpg' %}" alt="Image" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 ml-auto">
-              <center><h3 class="text-cursive mb-4" id="demotext3">
-                MISIÓN
-              </h3></center>
-              <ul>
-                <li>    
-                  Fomentar el desarrollo de la educación, de la salud, y el bienestar social. 
-                </li>
-                <li>
-                  Lograr el mejoramiento de la calidad de vida.
-                </li>
-                <li>
-                  Estimular la participación cívica y solidaria.
-                </li>
-                <li>
-                  Crear ámbitos de integración y recreación.
-                </li>
-                <li>
-                  Promover la dignidad humana en toda su dimensión ética y cultural, 
-                  particularmente la igualdad efectiva de oportunidades entre el hombre y la mujer 
-                  y los derechos de la infancia. 
-                </li>
-              </ul> 
-            </div>
-          </div>
         </div>
-      </div>
-  
-      <!-- Vision -->
-      <!--<div class="site-section">--> 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7">
-              <center><h3 class="text-cursive mb-4" id="demotext3">
-                VISIÓN
-              </h3></center>
-              <p>
-                Actualmente la ONG trabaja en tres instalaciones propias, 
-                en diferentes puntos de la localidad, a los que asisten 
-                mayoritariamente niños de barriadas carenciadas.
-              </p>
-              <p>
-                En este contexto los comedores se convierten en un espacio de contención en el que, 
-                además de proporcionarles alimento, se les brinda esparcimiento, apoyo escolar, 
-                actividades culturales y recreativas; afecto y atención.
-              </p>
-              <p>
-                Allí niños son escuchados y contenidos.
-              </p>
-              <p>
-                Queremos llegar a ser una ONG que sea destacada en la región por el acompañamiento 
-                que brinda a la comunidad, el esfuerzo de quienes participamos y, 
-                por el apoyo de quienes nos ayudan y acompañan.
-              </p>
-             </p>
-             <p>
-                Queremos llegar a ser una ONG que sea destacada en la región por el acompañamiento 
-                que brinda a la comunidad, el esfuerzo de quienes participamos y, 
-                por el apoyo de quienes nos ayudan y acompañan.
-               </p>
-            </div>
-            <div class="col-md-5">
-              <img src="{% static 'images/vision3.jpg' %}" alt="Image" class="img-fluid">
-              <img src="{% static 'images/vision1.jpg' %}" alt="Image" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      <!--</div>--> 
 
-      <div class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5">
-              <img src="{% static 'images/vision4.jpg' %}" alt="Image" class="img-fluid">
+                <div class="about-us">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <div class="left-image">
+                                  <img src="{%static 'assets/images/leche_miel.jpg' %}" height="380px" alt="Nuestro hogar, nuestro trabajo">
+    
+                              </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <div class="right-content">
+                                  <h4>Productos de campo</h4>
+                                  <span>Ofrecemos una amplia variedad de productos de campo de alta calidad. Entre ellos, destacan nuestra leche de tambo, producida por vacas criadas en pastos naturales y alimentadas con forrajes de alta calidad. También ofrecemos ricota fresca hecha con nuestra propia leche, miel de abejas criadas en hábitats naturales y dulce de leche casero, elaborado con leche fresca y azúcar de caña.
+                                    Todos nuestros productos son orgánicos y libres de químicos dañinos, para garantizar la máxima calidad y sabor. Además, trabajamos directamente con los agricultores locales para apoyar a la comunidad y ofrecer productos frescos y de temporada.
+                                  </span>
+                                  <ul>
+                                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            
+        <!-- ***** About Area Ends ***** -->
+    
+        <!-- ***** Our Team Area Starts ***** -->
+        <section class="our-team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading">
+                            <h2>Nuestro equipo</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-item">
+                            <div class="thumb">
+                                <div class="hover-effect">
+                                    <div class="inner-content">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/ailen.kolonisky" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://www.instagram.com/ailenkolonisky/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img src="{% static 'assets/images/perfil_1.jpg' %}">
+                            </div>
+                            <div class="down-content">
+                                <h4>Ailén Kolonisky</h4>
+                                <span>Acesora de redes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-item">
+                            <div class="thumb">
+                                <div class="hover-effect">
+                                    <div class="inner-content">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/profile.php?id=100089490341916" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img src="{% static 'assets/images/perfil_3.jpg' %} " height="350px" width="300">
+                            </div>
+                            <div class="down-content">
+                                <h4>Victor Peralta</h4>
+                                <span>Constructor de muebles y distribución de productos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-item">
+                            <div class="thumb">
+                                <div class="hover-effect">
+                                    <div class="inner-content">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/lucas.peralta.9655/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://twitter.com/lucasppperalta" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/lucas-emanuel-peralta-57564b220/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="https://www.instagram.com/lucasppperalta/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img src="{% static 'assets/images/perfil_2.jpg' %}" height="350px" width="300">
+                            </div>
+                            <div class="down-content">
+                                <h4>Lucas Peralta</h4>
+                                <span>Programador web y constructor de muebles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-              <iframe 
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Foportunidadecambio&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" 
-                class="facebook-iframe" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-              </iframe> 
-          </div>
-          </div>
-        </div>
-      </div>
+        </section>
+        <!-- ***** Our Team Area Ends ***** -->
+    
+    
+
+    
 
 {% endblock %}

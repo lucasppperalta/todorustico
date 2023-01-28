@@ -1,53 +1,39 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block contenido %}
-{% if post %}
-    
-    {% for p in post %}
 
-        <!--TITULO DEL POST-->
-        <p class="h2"></p>
-        <figure class="text-center">
-            <blockquote class="blockquote">
-              <h1>{{p.titulo}}</h1>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </figcaption>
-          </figure>
-        <!--TITULO DEL POST-->
-        {% if p.imagen %}
-        
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{{ p.imagen.url }}" class="img-thumbnail mx-auto d-block" alt="..." height="7000px" width="1000px"></i>>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ p.imagen.url }}" class="img-thumbnail mx-auto d-block" alt="..." height="7000px" width="1000px">
+
+{% if object_list %}
+
+{% for p in object_list %}
+    {% if  p.categoria.id == 5 %}
+
+    <!-- ***** Products Area Starts ***** -->
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-image">
+                        <img src="{{ p.imagen.url }}" height="350px" alt="">
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <h4>{{p.titulo}}</h4>
+                        <span>{{p.texto}}</span>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
-                  <!--para agregar mas imagenes copiar lo de arriba y añadir imagenes-->
+{% endfor %}
 
-                
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        {% else %}
-            <img src="post/default.jpg"  width="550" height="400">
-        {% endif %}
-        
-
-    {% endfor %}
-    
 {% else %}
-    <h1>Error 404</h1>
+<h1>Error 404</h1>
+
 {% endif %}
+    
+
 {% endblock %}

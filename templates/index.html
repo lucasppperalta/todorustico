@@ -1,71 +1,123 @@
 {% extends 'base.html' %}
 {% block contenido %}
-<body class="is-preload-0 is-preload-1 is-preload-2">
-    
-    <!-- Main -->
-        <div id="main">
-
-            <!-- Header -->
-                <header id="header">
-                    <a href="index">{% include 'image.html' %} </a>
-                    <h1 data-position="top center">Todo Rustico</h1>
-                    <p>Ventas de muebles y productos de campo</p>
-                    <ul class="icons">
-                        <li><a href="https://www.facebook.com/vintg.villaangela/" target="_blank" class="icon brands fa-facebook"><span class="label">facebook</span></a></li>
-                        <li><a href="https://www.instagram.com/todorustico.va/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
-                    </ul>
-                </header>
-
-            <!-- Thumbnail -->
-                <section id="thumbnails">
-                    <article>
-                        <a href="post/listarPost2/"><h2>Consulta precio</h2></a>
-                        <a class="thumbnail" href="/static/img/fulls/01_silla_p.jpg"  data-position="left center" height="720 px" width="960 px" ><img src="/static/img/thumbs/01_silla_p.jpg" height="150"  alt="" /><a href="post/listarPost2/"><img src="/static/img/thumbs/01_silla_p.jpg" height="150"  alt="" /></a></a>
-                        <a href="post/listarPost2/"> <h2>Sillas plegables</h2>
-                        <p>Ligeras de peso, fácil de transportar y guardar</p></a>
-                    </article>
-                    <article>
-                        <a class="thumbnail" href="/static/img/fulls/mesa_desayunadora.jpg" ><img src="/static/img/thumbs/mesa_desayunadora.jpg" height="150" alt="" /><a href="post/listarPost2/"><img src="/static/img/thumbs/mesa_desayunadora.jpg" height="150" alt="" /></a></a>
-                        <a href="post/listarPost2/"><h2>Barra desayunadora</h2>
-                        <p>Serví tus desayunos y meriendas con la mejor clase</p></a>
-                    </article>
-                    <article>
-                        <a class="thumbnail" href="/static/img/fulls/03.jpg" data-position="top center" height="720" width="960" ><img src="/static/img/thumbs/03.jpg" height="150"  alt="" /></a>
-                        <h2>Mesa y sillas para niños</h2>
-                        <p>Ideal para regalar a tus niños les va a encantar</p>
-                    </article>
-                    <article>
-                        <a class="thumbnail" href="/static/img/fulls/04.jpg"><img src="/static/img/thumbs/04.jpg" height="150" alt="" /></a>
-                        <h2>Mesa plegable familiar</h2>
-                        <p>Mesa plegable de 3 metros, fácil de trasladar y de guardar</p>
-                    </article>
-                    <article>
-                        <a class="thumbnail" href="/static/img/fulls/05.jpg" data-position="top center"><img src="/static/img/thumbs/05.jpg" height="150" alt="" /></a>
-                        <h2>Mesitas plegables</h2>
-                        <p>Ideal para un día de picnic, muy facil de transportar, ligeras de peso y muy resistentes</p>
-                    </article>
-                    <article>
-                        <a class="thumbnail" href="/static/img/fulls/perchero.jpg"><img src="/static/img/thumbs/perchero.jpg" height="150" alt="" /></a>
-                        <h2>Perchero recibidor</h2>
-                        <p>Recibí a tus invitados con mucho amor y este hermoso perchero recibidor</p>
-                    </article>
+<body>
 
 
-            <!-- Footer -->
-                <footer id="footer">
-                    <ul class="copyright">
-                        <li>&copy; Untitled.</li><li>Design: <a href="https://www.facebook.com/lucas.peralta.9655" target="_blank" >Lucas Peralta</a>.</li>
-                    </ul>
-                </footer>
-
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>Somos Todo Rustico</h4>
+                                <span>Te invitamos a Descubrir todo sobre nosotros</span>
+                                <div class="main-border-button">
+                                    <a href="{% url 'causes' %}">Conocenos</a>
+                                </div>
+                            </div>
+                            <img src="static/assets/images/imagen_principal_copia.jpg" height="630px" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Muebles</h4>
+                                            <span>Muebles para tu hogar</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Muebles</h4>
+                                                <p>Aquí podras ver la variedad de muebles que tenemos preparado para vos</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'apps.post:listarPost' %}">Descubre mas</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="static/assets/images/perchero_opacidad.jpg" height="300px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Campo</h4>
+                                            <span>Productos de campo directo a tu hogar</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Campo</h4>
+                                                <p>Podras encontrar productos de campo como leche, miel etc.</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'apps.post:listarPost2' %}">Descubre mas</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="static/assets/images/campo_copia.jpg" height="300px" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Próximamente</h4>
+                                            <span>Enterate nuestro próximo proyecto</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Próximamente</h4>
+                                                <p>Tenemos preparado una gran sorpresa para nuestros clientes, entrá y enterate</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'proximamente' %}">Descubre más</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="static/assets/images/proximamente_1_copia.jpg" height="300px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Noticias</h4>
+                                            <span>Enterate de las noticias que se vienen para vos</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Noticias</h4>
+                                                <p>Enterate de todas las noticias de descuento, lo que se viene etc.</p>
+                                                <div class="main-border-button">
+                                                    <a href="{% url 'apps.post:noticias' %}">Descubre mas</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="static/assets/images/noticias_copia1.jpg" height="300px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
 
-    <!-- Scripts -->
-        <script src="static/js/jquery.min.js"></script>
-        <script src="static/js/browser.min.js"></script>
-        <script src="static/js/breakpoints.min.js"></script>
-        <script src="static/js/main.js"></script>
 
-</body>
+
+
+
+  </body>
+
+
+
 {% endblock %}

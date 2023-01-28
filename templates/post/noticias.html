@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+
+{% if object_list %}
+
+{% for p in object_list %}
+    {% if  p.categoria.id == 6 %}
+
+    <!-- ***** Products Area Starts ***** -->
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-image">
+                        <img src="{{ p.imagen.url }}" height="350px" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <h4>{{p.titulo}}</h4>
+                        <span>{{p.texto}}</span>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endfor %}
+
+{% else %}
+<h1>Error 404</h1>
+
+{% endif %}
+    
+
+{% endblock %}
