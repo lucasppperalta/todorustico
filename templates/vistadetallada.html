@@ -6,7 +6,7 @@
 {% if object_list %}
 
 {% for p in object_list %}
-    {% if  p.categoria.nombre == 'noticias' %}
+    {% if  p.categoria.nombre == 'campo' %}
 
     <!-- ***** Products Area Starts ***** -->
     <div class="about-us">
@@ -14,12 +14,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-                        <img src="{{ p.imagen.url }}" height="350px" alt="">
+                       <a href="{% url 'vistadetallada.html'%}"><img src="{{ p.imagen.url }}" height="350px" alt=""></a> 
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="right-content">
-                        <h4>{{p.titulo}}</h4>
+                        <a href=""><h4>{{p.titulo}}</h4></a>
                         <span>{{p.texto}}</span>                     
                     </div>
                 </div>

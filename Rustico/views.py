@@ -6,8 +6,8 @@ def about(request):
     return render(request, 'proximamente.html')
 def causes(request):
     return render(request, 'causes.html')
-def blog(request):
-    return render(request, 'blog.html')
+def vista(request):
+    return render(request, 'vistadetallada.html')
 def contact(request):
     return render(request, 'contact.html')
 def login(request):

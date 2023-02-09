@@ -23,8 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index, name='index'),
     path('post/', include('apps.post.urls')),
+    path('usuario/', include('apps.usuario.urls')),
     path('causes/', causes, name='causes'),
     path('about/', about, name='proximamente'), 
+    path('vistadetallada/', vista, name='vistadetallada'),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

@@ -1,0 +1,13 @@
+
+{% load static %}
+{% block contenido %}
+
+<h1>Accede a tu cuenta</h1>
+<form method="post">{% csrf_token %}
+    {{form.as_p}}
+   
+    <input type="submit" value="save">
+
+
+</form>
+{% endblock %}
